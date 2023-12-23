@@ -15,9 +15,10 @@ import { RadioComponent } from './components/radio/radio.component'
 import { SelectComponent } from './components/select/select.component'
 import { TimeComponent } from './components/time/time.component'
 import { FormBuilderGeneratorService } from './services/form-builder-generate.service'
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
   declarations: [
     FormBuilderComponent,
     TemplateComponent,

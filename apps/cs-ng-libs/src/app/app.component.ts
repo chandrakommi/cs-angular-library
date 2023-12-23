@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'cs-ng-libs'
 
   configuration: FormBuilderConfig = {
-    configuration: {
+    controls: {
       firstName: {
         formControlName: 'firstName',
         placeholder: 'First Name',
@@ -38,16 +38,8 @@ export class AppComponent implements OnInit {
       },
     },
     validationMessages: {
-      firstName: {
-        required: 'First Name is required',
-      },
-      lastName: {
-        required: 'Last Name is required',
-      },
-      email: {
-        required: 'Email is required',
-        email: 'Email is invalid',
-      },
+      required: 'First Name is required',
+      email: 'Email is invalid',
     },
   }
 

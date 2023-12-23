@@ -1,5 +1,5 @@
 {
-  "configuration": {
+  "controls": {
     "name": {
       "formControlName": "name",
       "placeholder": "Enter your name",
@@ -30,15 +30,7 @@
     }
   },
   "validationMessages": {
-    "name": {
-      "required": "Name is required"
-    },
-    "email": {
-      "required": "Email is required",
-      "email": "Email is not valid"
-    },
-    "comment": {
-      "required": "Comment is required"
-    }
+    "required": "Name is required",
+    "email": "Email is not valid"
   }
 }

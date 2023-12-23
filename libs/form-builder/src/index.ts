@@ -1,6 +1,6 @@
 export * from './lib/form-builder.module'
 
-export * from './lib/components/form-builder/form-builder.component'
+export * from './lib/form-builder.component'
 export * from './lib/components/template/template.component'
 export * from './lib/components/auto-complete/auto-complete.component'
 export * from './lib/components/check-box/check-box.component'

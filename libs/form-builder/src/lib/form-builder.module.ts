@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { HttpClientModule } from '@angular/common/http'
+
 import { FormBuilderComponent } from './components/form-builder/form-builder.component'
 import { TemplateComponent } from './components/template/template.component'
 import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component'
@@ -12,23 +14,36 @@ import { LabelComponent } from './components/label/label.component'
 import { RadioComponent } from './components/radio/radio.component'
 import { SelectComponent } from './components/select/select.component'
 import { TimeComponent } from './components/time/time.component'
-const components = [
-  FormBuilderComponent,
-  TemplateComponent,
-  AutoCompleteComponent,
-  CheckBoxComponent,
-  ChipsComponent,
-  DateComponent,
-  DateTimeComponent,
-  InputComponent,
-  LabelComponent,
-  RadioComponent,
-  SelectComponent,
-  TimeComponent,
-]
+
 @NgModule({
-  imports: [CommonModule],
-  declarations: components,
-  exports: components,
+  imports: [CommonModule, HttpClientModule],
+  declarations: [
+    FormBuilderComponent,
+    TemplateComponent,
+    AutoCompleteComponent,
+    CheckBoxComponent,
+    ChipsComponent,
+    DateComponent,
+    DateTimeComponent,
+    InputComponent,
+    LabelComponent,
+    RadioComponent,
+    SelectComponent,
+    TimeComponent,
+  ],
+  exports: [
+    FormBuilderComponent,
+    TemplateComponent,
+    AutoCompleteComponent,
+    CheckBoxComponent,
+    ChipsComponent,
+    DateComponent,
+    DateTimeComponent,
+    InputComponent,
+    LabelComponent,
+    RadioComponent,
+    SelectComponent,
+    TimeComponent,
+  ],
 })
 export class CsngFormBuilderModule {}

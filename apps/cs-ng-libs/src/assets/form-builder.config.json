@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "name": {
+      "formControlName": "name",
+      "placeholder": "Enter your name",
+      "value": "",
+      "label": "Name",
+      "type": "text",
+      "controlType": "input"
+    },
+    "email": {
+      "formControlName": "email",
+      "placeholder": "Enter your email",
+      "value": "",
+      "label": "Email",
+      "type": "email",
+      "controlType": "input"
+    },
+    "subscription": {
+      "formControlName": "subscription",
+      "label": "Subscribe to newsletter",
+      "value": "false",
+      "controlType": "checkbox"
+    },
+    "comment": {
+      "formControlName": "comment",
+      "placeholder": "Enter your comment",
+      "label": "Comment",
+      "controlType": "textarea"
+    }
+  },
+  "validationMessages": {
+    "name": {
+      "required": "Name is required"
+    },
+    "email": {
+      "required": "Email is required",
+      "email": "Email is not valid"
+    },
+    "comment": {
+      "required": "Comment is required"
+    }
+  }
+}

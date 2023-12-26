@@ -1,3 +1,18 @@
-<cs-ng-form-builder
-  [configUrl]="'assets/form-builder.config.json'"
-></cs-ng-form-builder>
+<div class="container">
+  <div class="container mt-3">
+    <cs-ng-form-builder
+      [configUrl]="'assets/form-builder.config.json'"
+      (formChanges)="getFormChanges($event)"
+      [formGroup]="formGroup"
+    ></cs-ng-form-builder>
+  </div>
+  <button
+    class="btn btn-danger"
+    (click)="formGroup.reset()"
+  >
+    Reset
+  </button>
+
+  <button class="btn btn-primary" (click)="patchValue()">Patch</button>
+  <pre>{{ formGroup.value | json }}</pre>
+</div>

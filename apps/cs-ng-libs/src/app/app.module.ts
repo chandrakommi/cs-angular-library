@@ -4,10 +4,17 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component'
 import { CsngFormBuilderModule } from '@cs-ng/form-builder'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, CsngFormBuilderModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    CsngFormBuilderModule,
+    HttpClientModule,
+    // FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

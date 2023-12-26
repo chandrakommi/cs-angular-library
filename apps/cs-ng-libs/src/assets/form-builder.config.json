@@ -1,15 +1,13 @@
 {
   "controls": {
     "name": {
-      "formControlName": "name",
       "placeholder": "Enter your name",
-      "value": "",
+      "value": "Chandra sekhar",
       "label": "Name",
       "type": "text",
       "controlType": "input"
     },
     "email": {
-      "formControlName": "email",
       "placeholder": "Enter your email",
       "value": "",
       "label": "Email",
@@ -17,13 +15,11 @@
       "controlType": "input"
     },
     "subscription": {
-      "formControlName": "subscription",
       "label": "Subscribe to newsletter",
       "value": "false",
       "controlType": "checkbox"
     },
     "comment": {
-      "formControlName": "comment",
       "placeholder": "Enter your comment",
       "label": "Comment",
       "controlType": "textarea"

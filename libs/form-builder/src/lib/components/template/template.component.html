@@ -1,1 +1,9 @@
-<cs-ng-input></cs-ng-input>
+<!-- <pre>{{ control | json }}</pre> -->
+<cs-ng-input
+  *ngIf="control.controlType === 'input'"
+  [control]="control"
+  [formGroup]="formGroup"
+  [key]="key"
+  [label]="control.label || ''"
+  [placeholder]="control.placeholder || ''"
+></cs-ng-input>

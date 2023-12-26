@@ -1,6 +1,10 @@
-<div class="form-group">
+<div class="mb-3">
+  <label [htmlFor]="key">{{ label }}</label>
   <input
+    [attr.id]="key"
+    type="text"
     class="form-control"
     [placeholder]="placeholder"
+    [formControl]="formControl"
   />
 </div>

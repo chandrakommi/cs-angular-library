@@ -1,7 +1,6 @@
 import { ComponentTypes } from '../enums/ComponentTypes.enum'
 
 export type FormBuilderConfigControl = {
-  formControlName: string
   placeholder?: string
   value?: string
   label?: string

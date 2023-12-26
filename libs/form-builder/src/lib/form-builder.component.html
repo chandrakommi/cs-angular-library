@@ -1,5 +1,11 @@
-<cs-ng-template></cs-ng-template>
-
-<div class="container">
-  <pre>{{ formData | json }}</pre>
-</div>
+<ng-container *ngIf="formData && formData.controls as controlsData">
+  <form [formGroup]="formGroup">
+    <ng-container *ngFor="let key of controlsData | keysIn">
+      <cs-ng-template
+        [formGroup]="formGroup"
+        [control]="formData.controls[key]"
+        [key]="key"
+      ></cs-ng-template>
+    </ng-container>
+  </form>
+</ng-container>

@@ -1,7 +1,10 @@
-import { NgModule } from '@angular/core'
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NO_ERRORS_SCHEMA,
+  NgModule,
+} from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { HttpClientModule } from '@angular/common/http'
-
 import { FormBuilderComponent } from './form-builder.component'
 import { TemplateComponent } from './components/template/template.component'
 import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component'
@@ -14,11 +17,18 @@ import { LabelComponent } from './components/label/label.component'
 import { RadioComponent } from './components/radio/radio.component'
 import { SelectComponent } from './components/select/select.component'
 import { TimeComponent } from './components/time/time.component'
-import { FormBuilderGeneratorService } from './services/form-builder-generate.service'
-import { ReactiveFormsModule } from '@angular/forms'
+import { FormBuilderFormGroupGeneratorService } from './services/form-builder-generate.service'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { CsngUtilsModule } from '@cs-ng/utils'
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CsngUtilsModule,
+  ],
   declarations: [
     FormBuilderComponent,
     TemplateComponent,
@@ -47,6 +57,7 @@ import { ReactiveFormsModule } from '@angular/forms'
     SelectComponent,
     TimeComponent,
   ],
-  providers: [FormBuilderGeneratorService],
+  providers: [FormBuilderFormGroupGeneratorService],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class CsngFormBuilderModule {}

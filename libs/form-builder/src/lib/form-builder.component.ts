@@ -25,7 +25,6 @@ export class FormBuilderComponent
     private _fb: FormBuilder,
   ) {
     super()
-    this.formGroup = this._fb.group({})
   }
 
   async ngOnInit(): Promise<void> {

@@ -1,10 +1,37 @@
 <div class="mb-3">
   <label [htmlFor]="key">{{ label }}</label>
   <input
+    *ngIf="controlType === 'input'"
     [attr.id]="key"
     type="text"
     class="form-control"
     [placeholder]="placeholder"
     [formControl]="formControl"
+    [class.is-invalid]="formControl.invalid && formControl.touched"
+    autocomplete="off"
   />
+
+  <textarea
+    *ngIf="controlType === 'textarea'"
+    [attr.id]="key"
+    type="text"
+    class="form-control"
+    [placeholder]="placeholder"
+    [formControl]="formControl"
+    [class.is-invalid]="formControl.invalid && formControl.touched"
+    autocomplete="off"
+  ></textarea>
+
+  <ng-container *ngIf="formControl.errors && formControl.touched">
+    <ng-container *ngFor="let error of formControl.errors | keysIn">
+      <div
+        class="invalid-feedback"
+        *ngIf="control.validationMessages"
+      >
+        {{ control.validationMessages | get: error }}
+      </div>
+    </ng-container>
+  </ng-container>
 </div>
+
+<pre>{{ formControl.errors | json }}</pre>
